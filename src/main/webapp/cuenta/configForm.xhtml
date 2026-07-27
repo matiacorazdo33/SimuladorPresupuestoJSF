@@ -1,0 +1,61 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:ui="jakarta.faces.facelets"
+                template="/WEB-INF/template/layout.xhtml">
+
+    <f:metadata>
+        <f:viewParam name="campo" value="#{cuentaBean.campo}"/>
+    </f:metadata>
+
+    <ui:define name="titulo">#{cuentaBean.esLimite ? 'Configurar límite mensual' : 'Configurar saldo'} · FinFlow</ui:define>
+
+    <ui:define name="contenido">
+        <div class="pagina__encabezado">
+            <h1 class="pagina__titulo">#{cuentaBean.esLimite ? 'Configurar límite mensual' : 'Configurar saldo'}</h1>
+            <p class="pagina__subtitulo">
+                #{cuentaBean.esLimite ? 'Define cuánto quieres gastar como máximo este mes' : 'Establece cuánto dinero tienes disponible ahora mismo'}
+            </p>
+        </div>
+
+        <h:messages globalOnly="true" layout="table" styleClass="alerta alerta-error" style="width:100%"/>
+
+        <div class="tarjeta" style="max-width:560px;">
+            <h:form id="form">
+                <!-- Campo oculto: mantiene "campo" a través del postback de forma confiable -->
+                <h:inputHidden value="#{cuentaBean.campo}"/>
+
+                <!--
+                    Antes estos dos bloques usaban rendered="#{cuentaBean.esLimite}"
+                    (o su negación), pero eso causaba un bug: "campo" se
+                    actualiza vía el campo oculto de arriba, y JSF evalúa
+                    "rendered" para decidir qué inputs procesar ANTES de que
+                    ese campo oculto termine de actualizar el bean — así que
+                    el input correcto a veces nunca se decodificaba y el
+                    valor escrito se perdía. Ahora ambos se renderizan
+                    siempre (así los dos se procesan de forma confiable) y
+                    solo se oculta visualmente el que no corresponde.
+                -->
+                <h:panelGroup layout="block" styleClass="campo" style="#{cuentaBean.esLimite ? 'display:none' : ''}">
+                    <h:outputLabel for="saldo" value="Saldo disponible ($)"/>
+                    <h:inputText id="saldo" value="#{cuentaBean.saldoForm}">
+                        <f:convertNumber/>
+                    </h:inputText>
+                    <h:message for="saldo" styleClass="campo-error"/>
+                </h:panelGroup>
+
+                <h:panelGroup layout="block" styleClass="campo" style="#{cuentaBean.esLimite ? '' : 'display:none'}">
+                    <h:outputLabel for="limite" value="Límite mensual ($)"/>
+                    <h:inputText id="limite" value="#{cuentaBean.limiteForm}">
+                        <f:convertNumber/>
+                    </h:inputText>
+                    <h:message for="limite" styleClass="campo-error"/>
+                </h:panelGroup>
+
+                <h:commandButton value="#{cuentaBean.esLimite ? 'Guardar límite' : 'Guardar saldo'}"
+                                  action="#{cuentaBean.guardar}"
+                                  styleClass="btn btn-verde btn-ancho mt-24"/>
+            </h:form>
+        </div>
+    </ui:define>
+</ui:composition>

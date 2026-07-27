@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
+<h:head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title><ui:insert name="titulo">FinFlow</ui:insert></title>
+    <h:outputStylesheet library="css" name="styles.css"/>
+</h:head>
+<h:body>
+    <ui:include src="/WEB-INF/template/avatar.xhtml"/>
+
+    <div class="app #{authBean.emergencia ? 'emergencia' : ''}">
+        <ui:include src="/WEB-INF/template/sidebar.xhtml"/>
+
+        <main class="contenido">
+            <ui:insert name="contenido">Contenido no definido</ui:insert>
+        </main>
+    </div>
+</h:body>
+</html>

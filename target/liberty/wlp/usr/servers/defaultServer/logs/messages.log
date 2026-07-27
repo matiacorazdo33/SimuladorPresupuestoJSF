@@ -1,0 +1,209 @@
+********************************************************************************
+product = Open Liberty 26.0.0.7 (wlp-1.0.115.cl260720260702-0043)
+wlp.install.dir = /home/matias/POO/SimuladorPresupuestoJSF/target/liberty/wlp/
+java.home = /usr/lib/jvm/java-21-openjdk
+java.version = 21.0.11
+java.runtime = OpenJDK Runtime Environment (21.0.11+10)
+os = Linux (7.1.4-1-cachyos; amd64) (es_EC)
+process = 11441@cachyos
+Classpath = /home/matias/POO/SimuladorPresupuestoJSF/target/liberty/wlp/bin/tools/ws-server.jar
+Java Library path = /usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib
+********************************************************************************
+[27/7/26, 00:24:32:910 ECT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: El servidor defaultServer se ha lanzado.
+[27/7/26, 00:24:33:750 ECT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: El kernel se ha iniciado después de 1,079 segundos
+[27/7/26, 00:24:33:771 ECT] 00000034 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: La actualización de características se ha iniciado.
+[27/7/26, 00:24:34:794 ECT] 00000029 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Supervisando aplicaciones de dropins.
+[27/7/26, 00:24:35:052 ECT] 00000029 org.jboss.weld.Version                                       I WELD-000900: 5.1.1 (SP2)
+[27/7/26, 00:24:35:290 ECT] 00000038 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Iniciando la aplicación SimuladorPresupuestoJSF.
+[27/7/26, 00:24:35:292 ECT] 00000038 bm.ws.app.manager.war.internal.WARDeployedAppInfoFactoryImpl I CWWKZ0134I: La aplicación SimuladorPresupuestoJSF está utilizando la definición de aplicación dinámica en la ubicación /home/matias/POO/SimuladorPresupuestoJSF/target/liberty/wlp/usr/servers/defaultServer/apps/SimuladorPresupuestoJSF.war.xml.
+[27/7/26, 00:24:38:271 ECT] 00000038 org.jboss.weld.Event                                         I WELD-000411: Observer method [BackedAnnotatedMethod] org.apache.myfaces.config.annotation.CdiAnnotationProviderExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+[27/7/26, 00:24:38:348 ECT] 00000038 org.hibernate.validator.internal.util.Version                I HV000001: Hibernate Validator 7.0.4.Final
+[27/7/26, 00:24:39:020 ECT] 00000038 com.ibm.ws.session.WASSessionCore                            I SESN8501I: El gestor de sesiones no ha encontrado una ubicación de almacenamiento persistente; los objetos HttpSession se almacenarán en la memoria del servidor de aplicaciones local.
+[27/7/26, 00:24:39:029 ECT] 00000038 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Cargando módulo web: SimuladorPresupuestoJSF.
+[27/7/26, 00:24:39:033 ECT] 00000038 com.ibm.ws.webcontainer                                      I SRVE0250I: El módulo web SimuladorPresupuestoJSF se ha enlazado con default_host.
+[27/7/26, 00:24:39:034 ECT] 00000038 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Aplicación web disponible (default_host): http://localhost:9080/
+[27/7/26, 00:24:39:060 ECT] 0000003b com.ibm.ws.session.WASSessionCore                            I SESN0176I: Se creará un nuevo contexto de sesión para la clave de aplicación default_host/
+[27/7/26, 00:24:39:070 ECT] 0000003b com.ibm.ws.util                                              I SESN0172I: El gestor de sesiones está utilizando la implementación de SecureRandom Java por omisión para la generación del ID de sesión.
+[27/7/26, 00:24:39:151 ECT] 0000003b org.apache.myfaces.webapp.MyFacesContainerInitializer        I Using io.openliberty.faces40.internal.ee.WASMyFacesContainerInitializer
+[27/7/26, 00:24:39:302 ECT] 00000037 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: Se ha generado automáticamente un archivo de configuración para un plug-in de servidor web para este servidor en /home/matias/POO/SimuladorPresupuestoJSF/target/liberty/wlp/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[27/7/26, 00:24:39:399 ECT] 0000003b org.apache.myfaces.config.DefaultFacesConfigurationProvider  I Found jakarta.faces.application.ApplicationFactory factory implementation: io.openliberty.faces40.internal.config.WASApplicationFactoryImpl
+[27/7/26, 00:24:39:547 ECT] 0000003b org.apache.myfaces.util.ExternalSpecifications               I MyFaces Core CDI support enabled
+[27/7/26, 00:24:39:553 ECT] 0000003b org.apache.myfaces.util.ExternalSpecifications               I MyFaces Core Bean Validation support enabled
+[27/7/26, 00:24:39:659 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I Scanning for context init parameters not defined. It is not necessary to define them all into your web.xml, they are just provided here for informative purposes. To disable this messages set org.apache.myfaces.LOG_WEB_CONTEXT_PARAMS config param to 'false'
+[27/7/26, 00:24:39:660 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I Init context parameter found 'jakarta.faces.PROJECT_STAGE' set to 'Development'
+[27/7/26, 00:24:39:660 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.RESOURCE_EXCLUDES' found, using default value '.class .jsp .jspx .properties .xhtml .groovy'.
+[27/7/26, 00:24:39:660 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.STATE_SAVING_METHOD' found, using default value 'server'.
+[27/7/26, 00:24:39:660 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.FULL_STATE_SAVING_VIEW_IDS' found.
+[27/7/26, 00:24:39:660 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.PARTIAL_STATE_SAVING' found, using default value 'true (false with 1.2 webapps)'.
+[27/7/26, 00:24:39:660 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.SERIALIZE_SERVER_STATE' found, using default value 'false'.
+[27/7/26, 00:24:39:660 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.DEFAULT_SUFFIX' found, using default value '.xhtml'.
+[27/7/26, 00:24:39:660 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.FACELETS_SUFFIX' found, using default value '.xhtml'.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.FACELETS_VIEW_MAPPINGS' found.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.FACELETS_BUFFER_SIZE' found, using default value '1024'.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.FACELETS_DECORATORS' found.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.FACELETS_LIBRARIES' found.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.FACELETS_REFRESH_PERIOD' found, using default value '-1'.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.VALIDATE_EMPTY_FIELDS' found, using default value 'auto'.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.INTERPRET_EMPTY_STRING_SUBMITTED_VALUES_AS_NULL' found, using default value 'false'.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CLEAR_INPUT_WHEN_SUBMITTED_VALUE_IS_NULL_OR_EMPTY' found, using default value 'true'.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.ALWAYS_PERFORM_VALIDATION_WHEN_REQUIRED_IS_TRUE' found, using default value 'false'.
+[27/7/26, 00:24:39:661 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.VIEWROOT_PHASE_LISTENER_QUEUES_EXCEPTIONS' found, using default value 'false'.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE' found, using default value 'false'.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ENUM_CONVERTER_ALLOW_STRING_PASSTROUGH' found, using default value 'false'.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.CLIENT_WINDOW_MODE' found, using default value 'none'.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.NUMBER_OF_CLIENT_WINDOWS' found, using default value '10'.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.validator.DISABLE_DEFAULT_BEAN_VALIDATOR' found, using default value 'true'.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.validator.ENABLE_VALIDATE_WHOLE_BEAN' found, using default value 'false'.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.CONFIG_FILES' found.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.LIFECYCLE_ID' found.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.DISABLE_FACESSERVLET_TO_XHTML' found.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.AUTOMATIC_EXTENSIONLESS_MAPPING' found.
+[27/7/26, 00:24:39:662 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_LAMBDA_METAFACTORY' found, using default value 'false'.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_ENCRYPTION' found, using default value 'true'.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SECRET' found.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM' found, using default value 'AES'.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SECRET.CACHE' found.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM.IV' found.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALGORITHM.PARAMETERS' found, using default value 'ECB/PKCS5Padding'.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SERIAL_FACTORY' found.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPRESS_STATE_IN_CLIENT' found, using default value 'false'.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_ALGORITHM' found, using default value 'HmacSHA256'.
+[27/7/26, 00:24:39:663 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_SECRET' found.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MAC_SECRET.CACHE' found.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CONFIG_REFRESH_PERIOD' found, using default value '2'.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_VIEWSTATE_ID' found, using default value 'true'.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_XHTML_LINKS' found, using default value 'true'.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_CLEAR_JAVASCRIPT_FOR_BUTTON' found, using default value 'false'.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DELEGATE_FACES_SERVLET' found.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.REFRESH_TRANSIENT_BUILD_ON_PSS' found, using default value 'auto'.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.REFRESH_TRANSIENT_BUILD_ON_PSS_PRESERVE_STATE' found, using default value 'false'.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VALIDATE_XML' found.
+[27/7/26, 00:24:39:664 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WRAP_SCRIPT_CONTENT_WITH_XML_COMMENT_TAG' found, using default value 'false'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEBUG_PHASE_LISTENER' found.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_CC_EL_RESOLVER' found, using default value 'false'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEFAULT_RESPONSE_WRITER_CONTENT_TYPE_MODE' found, using default value 'text/html'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_UNIQUE_IDS_CACHE_ENABLED' found, using default value 'true'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPONENT_UNIQUE_IDS_CACHE_SIZE' found, using default value '100'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_VIEW_NOT_FOUND' found, using default value 'false'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EARLY_FLUSH_ENABLED' found, using default value 'false'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_FACELETS_COMPATIBILITY' found, using default value 'false'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_FORM_VIEW_STATE_AT_BEGIN' found, using default value 'false'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FLASH_SCOPE_DISABLED' found, using default value 'false'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_VIEWS_IN_SESSION' found, using default value '20'.
+[27/7/26, 00:24:39:665 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_SEQUENTIAL_VIEWS_IN_SESSION' found, using default value '4'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.NUMBER_OF_FLASH_TOKENS_IN_SESSION' found.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SUPPORT_EL_3_IMPORT_HANDLER' found, using default value 'false'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_ORIGIN_HEADER_APP_PATH' found, using default value 'false'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.STRICT_JSF_2_ALLOW_SLASH_LIBRARY_NAME' found, using default value 'false'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_BUFFER_SIZE' found, using default value '2048'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VALIDATE' found, using default value 'false'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.annotation.USE_CDI_FOR_ANNOTATION_SCANNING' found, using default value 'false'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_HANDLER_CACHE_SIZE' found, using default value '500'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_HANDLER_CACHE_ENABLED' found, using default value 'true'.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.annotation.SCAN_PACKAGES' found.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'jakarta.faces.WEBSOCKET_ENDPOINT_PORT' found.
+[27/7/26, 00:24:39:666 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WEBSOCKET_MAX_IDLE_TIMEOUT' found, using default value '300000'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_WEBSOCKET_SESSION_TOKEN' found, using default value 'secureRandom'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CLIENT_VIEW_STATE_TIMEOUT' found, using default value '0'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN' found, using default value 'secureRandom'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_LENGTH' found, using default value '8'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_CLASS' found.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_PROVIDER' found.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_VIEW_STATE_SESSION_TOKEN_SECURE_RANDOM_ALGORITHM' found, using default value 'SHA1PRNG'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN' found, using default value 'secureRandom'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.COMPRESS_STATE_IN_SESSION' found, using default value 'true'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.USE_FLASH_SCOPE_PURGE_VIEWS_IN_SESSION' found, using default value 'false'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.AUTOCOMPLETE_OFF_VIEW_STATE' found, using default value 'true'.
+[27/7/26, 00:24:39:667 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_MAX_TIME_EXPIRES' found, using default value '604800000'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.LAZY_LOAD_CONFIG_OBJECTS' found, using default value 'true'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EL_RESOLVER_COMPARATOR' found.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EL_RESOLVER_PREDICATE' found.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEWID_CACHE_SIZE' found, using default value '500'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEWID_EXISTS_CACHE_ENABLED' found, using default value 'true'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEWID_PROTECTED_CACHE_ENABLED' found, using default value 'true'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEWID_DERIVE_CACHE_ENABLED' found, using default value 'true'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.validator.BEAN_BEFORE_JSF_VALIDATION' found, using default value 'false'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FACES_INIT_PLUGINS' found.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.INITIALIZE_SKIP_JAR_FACES_CONFIG_SCAN' found, using default value 'false'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.INITIALIZE_ALWAYS_STANDALONE' found, using default value 'false'.
+[27/7/26, 00:24:39:668 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EXPRESSION_FACTORY' found.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CHECK_ID_PRODUCTION_MODE' found, using default value 'auto'.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.MARK_INITIAL_STATE_WHEN_APPLY_BUILD_VIEW' found, using default value 'false'.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.CACHE_EL_EXPRESSIONS' found, using default value 'noCache'.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WRAP_TAG_EXCEPTIONS_AS_CONTEXT_AWARE' found, using default value 'true'.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_CACHE_LAST_MODIFIED' found, using default value 'true'.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.LOG_WEB_CONTEXT_PARAMS' found, using default value 'dev-only'.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.FACES_INITIALIZER' found.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.spi.InjectionProvider' found.
+[27/7/26, 00:24:39:669 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.WEBSOCKET_MAX_CONNECTIONS' found.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RENDER_CLIENTBEHAVIOR_SCRIPTS_AS_STRING' found, using default value 'false'.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ALWAYS_FORCE_SESSION_CREATION' found, using default value 'false'.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RESOURCE_BUNDLE_CONTROL' found.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EL_RESOLVER_TRACING' found, using default value 'false'.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.EXCEPTION_TYPES_TO_IGNORE_IN_LOGGING' found.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ERROR_TEMPLATE_RESOURCE' found, using default value 'META-INF/rsc/myfaces-dev-error.xml'.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.DEBUG_TEMPLATE_RESOURCE' found, using default value 'META-INF/rsc/myfaces-dev-debug.xml'.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.ERROR_HANDLING' found, using default value 'false, on Development Project stage: true'.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.TEMPORAL_RESOURCEHANDLER_CACHE_ENABLED' found, using default value 'false'.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.SERVICE_PROVIDER_FINDER' found.
+[27/7/26, 00:24:39:670 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_LENGTH' found, using default value '16'.
+[27/7/26, 00:24:39:671 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_CLASS' found.
+[27/7/26, 00:24:39:671 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_PROVIDER' found.
+[27/7/26, 00:24:39:671 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.RANDOM_KEY_IN_CSRF_SESSION_TOKEN_SECURE_RANDOM_ALGORITM' found, using default value 'SHA1PRNG'.
+[27/7/26, 00:24:39:671 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_MAX_POOL_SIZE' found, using default value '5'.
+[27/7/26, 00:24:39:671 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_MAX_DYNAMIC_PARTIAL_LIMIT' found, using default value '2'.
+[27/7/26, 00:24:39:671 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_ENTRY_MODE' found, using default value 'soft'.
+[27/7/26, 00:24:39:671 ECT] 0000003b org.apache.myfaces.webapp.WebConfigParamsLogger              I No context init parameter 'org.apache.myfaces.VIEW_POOL_DEFERRED_NAVIGATION' found, using default value 'false'.
+[27/7/26, 00:24:39:672 ECT] 0000003b org.apache.myfaces.webapp.FacesInitializerImpl               W 
+
+********************************************************************
+*** WARNING: Apache MyFaces Core is running in DEVELOPMENT mode. ***
+***                                            ^^^^^^^^^^^       ***
+*** Do NOT deploy to your live server(s) without changing this.  ***
+*** See Application#getProjectStage() for more information.      ***
+********************************************************************
+
+
+[27/7/26, 00:24:39:678 ECT] 0000003b org.apache.myfaces.webapp.FacesInitializerImpl               I MyFaces Core has started, it took [438] ms.
+[27/7/26, 00:24:39:924 ECT] 0000003b org.hibernate.jpa.internal.util.LogHelper                    I HHH000204: Processing PersistenceUnitInfo [name: simuladorPU]
+[27/7/26, 00:24:40:080 ECT] 0000003b org.hibernate.Version                                        I HHH000412: Hibernate ORM core version 6.5.2.Final
+[27/7/26, 00:24:40:139 ECT] 0000003b org.hibernate.cache.internal.RegionFactoryInitiator          I HHH000026: Second-level cache disabled
+[27/7/26, 00:24:40:407 ECT] 0000003b org.hibernate.orm.connections.pooling                        W HHH10001002: Using built-in connection pool (not intended for production use)
+[27/7/26, 00:24:40:416 ECT] 0000003b org.hibernate.orm.connections.pooling                        I HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+[27/7/26, 00:24:40:417 ECT] 0000003b org.hibernate.orm.connections.pooling                        I HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5432/simulador_presupuesto]
+[27/7/26, 00:24:40:418 ECT] 0000003b org.hibernate.orm.connections.pooling                        I HHH10001001: Connection properties: {password=****, user=simulador}
+[27/7/26, 00:24:40:418 ECT] 0000003b org.hibernate.orm.connections.pooling                        I HHH10001003: Autocommit mode: false
+[27/7/26, 00:24:40:424 ECT] 0000003b org.hibernate.orm.connections.pooling                        I HHH10001115: Connection pool size: 20 (min=1)
+[27/7/26, 00:24:40:770 ECT] 0000003b org.hibernate.orm.deprecation                                W HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[27/7/26, 00:24:40:942 ECT] 0000003b org.hibernate.orm.beans                                      I HHH10005002: No explicit CDI BeanManager reference was passed to Hibernate, but CDI is available on the Hibernate ClassLoader.
+[27/7/26, 00:24:42:327 ECT] 0000003b ngine.transaction.jta.platform.internal.JtaPlatformInitiator I HHH000490: Using JTA platform [org.hibernate.engine.transaction.jta.platform.internal.WebSphereLibertyJtaPlatform]
+[27/7/26, 00:24:42:354 ECT] 0000003b org.hibernate.orm.connections.access                         I HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@521665d6] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[27/7/26, 00:24:42:424 ECT] 0000003b org.hibernate.engine.jdbc.spi.SqlExceptionHelper             W SQL Warning Code: 0, SQLState: 00000
+[27/7/26, 00:24:42:424 ECT] 0000003b org.hibernate.engine.jdbc.spi.SqlExceptionHelper             W constraint "ukio49vjba68pmbgpy9vtw8vm81" of relation "usuarios" does not exist, skipping
+[27/7/26, 00:24:42:430 ECT] 0000003b org.hibernate.engine.jdbc.spi.SqlExceptionHelper             W SQL Warning Code: 0, SQLState: 00000
+[27/7/26, 00:24:42:431 ECT] 0000003b org.hibernate.engine.jdbc.spi.SqlExceptionHelper             W constraint "ukcdmw5hxlfj78uf4997i3qyyw5" of relation "usuarios" does not exist, skipping
+[27/7/26, 00:24:42:438 ECT] 0000003b org.hibernate.engine.jdbc.spi.SqlExceptionHelper             W SQL Warning Code: 0, SQLState: 00000
+[27/7/26, 00:24:42:438 ECT] 0000003b org.hibernate.engine.jdbc.spi.SqlExceptionHelper             W constraint "uktl9d4mxke3cyuu91ri2sbrpi8" of relation "usuarios" does not exist, skipping
+[27/7/26, 00:24:43:008 ECT] 0000003b SystemOut                                                    O ==============================================
+[27/7/26, 00:24:43:009 ECT] 0000003b SystemOut                                                    O  Cuenta de administrador creada
+[27/7/26, 00:24:43:009 ECT] 0000003b SystemOut                                                    O  Usuario/correo: admin@simulador.com (o "admin")
+[27/7/26, 00:24:43:009 ECT] 0000003b SystemOut                                                    O  Contraseña:     admin123
+[27/7/26, 00:24:43:009 ECT] 0000003b SystemOut                                                    O  (cámbialas en AdminInicializadorListener.java)
+[27/7/26, 00:24:43:010 ECT] 0000003b SystemOut                                                    O ==============================================
+[27/7/26, 00:24:43:011 ECT] 0000003b com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: La aplicación SimuladorPresupuestoJSF se ha iniciado en 7,721 segundos.
+[27/7/26, 00:24:43:036 ECT] 00000034 com.ibm.ws.tcpchannel.internal.TCPPort                       I CWWKO0219I: El canal TCP defaultHttpEndpoint se ha iniciado y ahora está a la escucha de solicitudes en el host localhost  (IPv4: 127.0.0.1) puerto 9080.
+[27/7/26, 00:24:43:048 ECT] 0000003b com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [SimuladorPresupuestoJSF] [/] [Faces Servlet]: Inicialización satisfactoria.
+[27/7/26, 00:24:43:049 ECT] 00000034 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: El servidor ha instalado las características siguientes: [beanValidation-3.0, cdi-4.0, expressionLanguage-5.0, faces-4.0, mail-2.1, servlet-6.0].
+[27/7/26, 00:24:43:050 ECT] 00000034 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: La actualización de características se ha completado en 9,303 segundos.
+[27/7/26, 00:24:43:050 ECT] 00000034 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: El servidor defaultServer está preparado para ejecutar un planeta más inteligente. El servidor defaultServer se ha iniciado en 10,381 segundos.
+[27/7/26, 00:25:00:831 ECT] 00000051 org.apache.myfaces.util.ExternalSpecifications               I MyFaces Core Servlet 6.0 support enabled
+[27/7/26, 00:25:01:038 ECT] 00000051 org.apache.myfaces.el.ELResolverBuilder                      I Chain of EL resolvers: [org.apache.myfaces.el.resolver.implicitobject.ImplicitObjectResolver@61ca0275, org.jboss.weld.module.web.el.WeldELResolver@16699754, org.apache.myfaces.el.resolver.CompositeComponentELResolver@2f9da450, org.apache.myfaces.el.resolver.FlashELResolver@28bb2d73, org.apache.myfaces.el.resolver.ResourceResolver@19534bbb, jakarta.el.ResourceBundleELResolver@43dabcf2, org.apache.myfaces.el.resolver.ResourceBundleResolver@1273ffd, org.apache.myfaces.el.resolver.ImportConstantsELResolver@70864a1f, org.apache.el.stream.StreamELResolverImpl@738bc927, jakarta.el.StaticFieldELResolver@65a0c688, jakarta.el.MapELResolver@5dc0d516, jakarta.el.ListELResolver@1fd4ba03, jakarta.el.ArrayELResolver@32bb9a2f, jakarta.el.BeanELResolver@51cc8e76]
+[27/7/26, 00:25:01:790 ECT] 00000039 com.ibm.ws.webcontainer.webapp                               I SRVE0292I: Mensaje de servlet - [SimuladorPresupuestoJSF]:.No state saving method defined, assuming default server state saving
+[27/7/26, 01:19:07:560 ECT] 0000001d com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0085I: El servidor defaultServer se detiene porque la JVM está concluyendo.
+[27/7/26, 01:19:07:579 ECT] 00000ba7 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Esperando un máximo de 30 segundos para que el servidor se desactive temporalmente.
+[27/7/26, 01:19:07:595 ECT] 00000ba2 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: El canal TCP defaultHttpEndpoint ha detenido la escucha de solicitudes en el host localhost  (IPv4: 127.0.0.1) puerto 9080.
+[27/7/26, 01:19:07:597 ECT] 00000ba2 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Aplicación web eliminada (default_host): http://localhost:9080/
+[27/7/26, 01:19:07:602 ECT] 00000ba7 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: La desactivación temporal del servidor ha finalizado.
+[27/7/26, 01:19:07:710 ECT] 00000b99 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: La aplicación SimuladorPresupuestoJSF se ha detenido correctamente.
+[27/7/26, 01:19:08:037 ECT] 0000001e com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Conclusión del servidor solicitada el lunes, 27 de julio de 2026 a las 01:19. El servidor defaultServer se está cerrando.
+[27/7/26, 01:19:08:165 ECT] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: El servidor defaultServer se ha detenido después de 54 minutos, 35,495 segundos.

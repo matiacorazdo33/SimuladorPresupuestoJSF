@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
+             version="3.1">
+
+    <!--
+        Unidad de persistencia RESOURCE_LOCAL: la aplicacion abre su propia
+        conexion JDBC directamente (via EntityManagerFactory), sin depender
+        de un DataSource JNDI configurado en server.xml. Esto facilita correr
+        el proyecto solo con Docker (docker compose up -d) sin tocar Liberty.
+    -->
+    <persistence-unit name="simuladorPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <class>edu.unl.cc.dominio.Usuario</class>
+        <class>edu.unl.cc.dominio.CuentaJuego</class>
+        <class>edu.unl.cc.dominio.Presupuesto</class>
+        <class>edu.unl.cc.dominio.Transaccion</class>
+        <class>edu.unl.cc.dominio.Ingreso</class>
+        <class>edu.unl.cc.dominio.Gasto</class>
+
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/simulador_presupuesto"/>
+            <property name="jakarta.persistence.jdbc.user" value="simulador"/>
+            <property name="jakarta.persistence.jdbc.password" value="simulador"/>
+
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

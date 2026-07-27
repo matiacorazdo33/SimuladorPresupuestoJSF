@@ -1,0 +1,89 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:ui="jakarta.faces.facelets"
+                template="/WEB-INF/template/layout.xhtml">
+    <ui:define name="titulo">Presupuesto · FinFlow</ui:define>
+
+    <ui:define name="contenido">
+        <div class="pagina__encabezado">
+            <h1 class="pagina__titulo">Presupuesto</h1>
+            <p class="pagina__subtitulo">Límite mensual y lo que te queda por gastar</p>
+        </div>
+
+        <h:panelGroup rendered="#{cuentaBean.superado}">
+            <div class="alerta-grande alerta-grande--error">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.3 3.9 1.9 18a2 2 0 0 0 1.7 3h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path>
+                    <path d="M12 9v4"></path>
+                    <path d="M12 17h.01"></path>
+                </svg>
+                <span>Superaste tu límite mensual. Considera ajustar tus gastos.</span>
+            </div>
+        </h:panelGroup>
+        <h:panelGroup rendered="#{not cuentaBean.superado}">
+            <div class="alerta-grande alerta-grande--exito">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5"></path>
+                </svg>
+                <span>Vas bien: aún estás dentro de tu límite mensual.</span>
+            </div>
+        </h:panelGroup>
+
+        <div class="stats-presupuesto">
+            <div class="stat-presupuesto">
+                <div class="stat-presupuesto__icono stat-presupuesto__icono--limite">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 8v4l2.5 2.5"></path>
+                    </svg>
+                </div>
+                <div class="stat-presupuesto__etiqueta">Límite mensual</div>
+                <p class="stat-presupuesto__cifra">
+                    <h:outputText value="#{cuentaBean.limite}"><f:convertNumber type="currency" currencySymbol="$"/></h:outputText>
+                </p>
+            </div>
+
+            <div class="stat-presupuesto">
+                <div class="stat-presupuesto__icono stat-presupuesto__icono--gastado">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 19V5"></path>
+                        <path d="M5 12l7-7 7 7"></path>
+                    </svg>
+                </div>
+                <div class="stat-presupuesto__etiqueta">Gastado</div>
+                <p class="stat-presupuesto__cifra stat-presupuesto__cifra--rojo">
+                    <h:outputText value="#{cuentaBean.gastado}"><f:convertNumber type="currency" currencySymbol="$"/></h:outputText>
+                </p>
+            </div>
+
+            <div class="stat-presupuesto">
+                <div class="stat-presupuesto__icono stat-presupuesto__icono--restante">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14"></path>
+                        <path d="M5 12h14"></path>
+                    </svg>
+                </div>
+                <div class="stat-presupuesto__etiqueta">Restante</div>
+                <p class="stat-presupuesto__cifra stat-presupuesto__cifra--verde">
+                    <h:outputText value="#{cuentaBean.restante}"><f:convertNumber type="currency" currencySymbol="$"/></h:outputText>
+                </p>
+            </div>
+        </div>
+
+        <div class="tarjeta-progreso">
+            <div class="tarjeta-progreso__encabezado">
+                <div>
+                    <div class="tarjeta__etiqueta">Progreso del gasto</div>
+                    <p class="tarjeta-progreso__sub">De tu límite mensual disponible</p>
+                </div>
+                <div class="tarjeta-progreso__porcentaje #{cuentaBean.superado ? 'sobregiro' : ''}">
+                    #{cuentaBean.porcentaje}<span>%</span>
+                </div>
+            </div>
+            <div class="barra barra--grande">
+                <div class="barra__relleno #{cuentaBean.superado ? 'sobregiro' : ''}" style="width: #{cuentaBean.porcentaje}%"></div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

@@ -1,0 +1,92 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:ui="jakarta.faces.facelets">
+    <details class="avatar-flotante">
+        <summary class="avatar-flotante__circulo">#{authBean.inicial}</summary>
+
+        <div class="avatar-flotante__menu">
+            <div class="avatar-flotante__flecha"></div>
+
+            <div class="avatar-flotante__cabecera">
+                <div class="avatar-flotante__circulo avatar-flotante__circulo--grande">#{authBean.inicial}</div>
+                <strong>#{authBean.usuarioActual.nombre}</strong>
+                <span>#{authBean.usuarioActual.correo}</span>
+                <span class="avatar-flotante__rol #{authBean.usuarioActual.esAdmin() ? 'admin' : ''}">
+                    #{authBean.usuarioActual.esAdmin() ? 'Administrador' : 'Usuario'}
+                </span>
+            </div>
+
+            <div class="avatar-flotante__saldo">
+                <span class="avatar-flotante__saldo-etiqueta">Saldo disponible</span>
+                <span class="avatar-flotante__saldo-cifra">
+                    <h:outputText value="#{authBean.saldoActual}">
+                        <f:convertNumber type="currency" currencySymbol="$"/>
+                    </h:outputText>
+                </span>
+            </div>
+
+            <div class="avatar-flotante__acciones">
+                <h:link outcome="/menu.xhtml" styleClass="avatar-flotante__accion">
+                    <span class="avatar-flotante__accion-icono avatar-flotante__accion-icono--menu">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+                            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+                            <rect x="3" y="14" width="7" height="7" rx="1"></rect>
+                            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+                        </svg>
+                    </span>
+                    Ir al menú
+                </h:link>
+                <h:link outcome="/saldo.xhtml" styleClass="avatar-flotante__accion">
+                    <span class="avatar-flotante__accion-icono avatar-flotante__accion-icono--historial">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <path d="M14 2v6h6"></path>
+                            <path d="M9 13h6"></path>
+                            <path d="M9 17h6"></path>
+                        </svg>
+                    </span>
+                    Ver historial
+                </h:link>
+                <h:link outcome="/cuenta/configForm.xhtml" styleClass="avatar-flotante__accion">
+                    <f:param name="campo" value="saldo"/>
+                    <span class="avatar-flotante__accion-icono avatar-flotante__accion-icono--saldo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="6" width="20" height="13" rx="2"></rect>
+                            <path d="M2 10h20"></path>
+                            <path d="M6 15h4"></path>
+                        </svg>
+                    </span>
+                    Configurar saldo
+                </h:link>
+                <h:link outcome="/cuenta/configForm.xhtml" styleClass="avatar-flotante__accion">
+                    <f:param name="campo" value="limite"/>
+                    <span class="avatar-flotante__accion-icono avatar-flotante__accion-icono--limite">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M12 8v4l2.5 2.5"></path>
+                        </svg>
+                    </span>
+                    Configurar límite mensual
+                </h:link>
+            </div>
+
+            <hr class="avatar-flotante__separador"/>
+
+            <h:form styleClass="avatar-flotante__pie">
+                <h:commandLink action="#{authBean.cerrarSesionYRedirigir}"
+                                styleClass="avatar-flotante__accion avatar-flotante__accion--salir">
+                    <span class="avatar-flotante__accion-icono avatar-flotante__accion-icono--salir">
+                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <path d="M16 17l5-5-5-5"></path>
+                            <path d="M21 12H9"></path>
+                        </svg>
+                    </span>
+                    Cerrar sesión
+                </h:commandLink>
+            </h:form>
+        </div>
+    </details>
+</ui:composition>

@@ -1,0 +1,144 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:f="jakarta.faces.core"
+                xmlns:ui="jakarta.faces.facelets"
+                template="/WEB-INF/template/layout.xhtml">
+    <ui:define name="titulo">Menú · FinFlow</ui:define>
+
+    <ui:define name="contenido">
+        <h:panelGroup rendered="#{cuentaBean.superado}">
+            <div class="banner-emergencia">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10.3 3.9 1.9 18a2 2 0 0 0 1.7 3h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path>
+                    <path d="M12 9v4"></path>
+                    <path d="M12 17h.01"></path>
+                </svg>
+                Superaste tu límite mensual. Estás en modo emergencia — revisa tus gastos.
+            </div>
+        </h:panelGroup>
+
+        <div class="pagina__encabezado">
+            <h1 class="pagina__titulo">Hola, #{cuentaBean.usuario.nombre}</h1>
+            <p class="pagina__subtitulo">Bienvenido de vuelta a tu simulador</p>
+        </div>
+
+        <div class="tarjetas-grid">
+            <div class="tarjeta-balance">
+                <div class="tarjeta__etiqueta">Balance total</div>
+                <p class="tarjeta__cifra">
+                    <h:outputText value="#{cuentaBean.saldo}"><f:convertNumber type="currency" currencySymbol="$"/></h:outputText>
+                </p>
+                <span class="tarjeta__xp">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2l2.9 6 6.6.6-5 4.4 1.5 6.5L12 16l-5.9 3.5L7.5 13l-5-4.4 6.5-.6z"></path>
+                    </svg>
+                    <span>#{cuentaBean.xp} XP acumulados</span>
+                </span>
+            </div>
+
+            <div class="tarjeta">
+                <div class="tarjeta__etiqueta">Presupuesto mensual</div>
+                <p class="tarjeta__cifra" style="color: var(--oscuro-2)">
+                    <h:outputText value="#{cuentaBean.limite}"><f:convertNumber type="currency" currencySymbol="$"/></h:outputText>
+                </p>
+                <div class="barra">
+                    <div class="barra__relleno #{cuentaBean.superado ? 'sobregiro' : ''}" style="width: #{cuentaBean.porcentaje}%"></div>
+                </div>
+                <p class="tarjeta__nota">#{cuentaBean.porcentaje}% usado</p>
+            </div>
+        </div>
+
+        <div class="config-rapida">
+            <h:link outcome="/cuenta/configForm.xhtml" styleClass="config-rapida__chip config-rapida__chip--saldo">
+                <f:param name="campo" value="saldo"/>
+                <div class="config-rapida__icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="6" width="20" height="13" rx="2"></rect>
+                        <path d="M2 10h20"></path>
+                        <path d="M6 15h4"></path>
+                    </svg>
+                </div>
+                <div class="config-rapida__texto">
+                    <strong>Configurar saldo</strong>
+                    <small>Establece tu saldo disponible</small>
+                </div>
+                <svg class="config-rapida__chevron" viewBox="0 0 24 24" fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"></path>
+                </svg>
+            </h:link>
+
+            <h:link outcome="/cuenta/configForm.xhtml" styleClass="config-rapida__chip config-rapida__chip--limite">
+                <f:param name="campo" value="limite"/>
+                <div class="config-rapida__icono">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 8v4l2.5 2.5"></path>
+                    </svg>
+                </div>
+                <div class="config-rapida__texto">
+                    <strong>Configurar límite mensual</strong>
+                    <small>Define cuánto quieres gastar este mes</small>
+                </div>
+                <svg class="config-rapida__chevron" viewBox="0 0 24 24" fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"></path>
+                </svg>
+            </h:link>
+        </div>
+
+        <div class="acciones-grid">
+            <h:link outcome="/movimientoForm.xhtml" styleClass="accion">
+                <f:param name="tipo" value="ingreso"/>
+                <div class="accion__icono verde">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 5v14"></path>
+                        <path d="M5 12h14"></path>
+                    </svg>
+                </div>
+                <div class="accion__texto">
+                    <strong>Registrar ingreso</strong>
+                    <small>Añade dinero a tu cuenta</small>
+                </div>
+                <svg class="accion__chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"></path>
+                </svg>
+            </h:link>
+
+            <h:link outcome="/movimientoForm.xhtml" styleClass="accion">
+                <f:param name="tipo" value="gasto"/>
+                <div class="accion__icono oscuro">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                    </svg>
+                </div>
+                <div class="accion__texto">
+                    <strong>Registrar gasto</strong>
+                    <small>Registra una nueva salida</small>
+                </div>
+                <svg class="accion__chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"></path>
+                </svg>
+            </h:link>
+        </div>
+
+        <div class="acciones-grid mt-24">
+            <h:link outcome="/arcade.xhtml" styleClass="accion">
+                <div class="accion__icono verde">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                        <path d="M7 10v4"></path>
+                        <path d="M5 12h4"></path>
+                        <circle cx="16" cy="10.5" r="0.6" fill="currentColor"></circle>
+                        <circle cx="18" cy="13.5" r="0.6" fill="currentColor"></circle>
+                    </svg>
+                </div>
+                <div class="accion__texto">
+                    <strong>Zona Arcade</strong>
+                    <small>Juega y gana XP para canjear en la tienda</small>
+                </div>
+                <svg class="accion__chevron" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 18l6-6-6-6"></path>
+                </svg>
+            </h:link>
+        </div>
+    </ui:define>
+</ui:composition>
