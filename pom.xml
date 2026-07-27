@@ -1,2 +1,115 @@
-gtjbugbr 
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>edu.unl.cc</groupId>
+    <artifactId>SimuladorPresupuestoJSF</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>SimuladorPresupuestoJSF</name>
+    <description>
+        Version JSF / Jakarta EE (desplegada en Open Liberty) del Simulador de
+        Presupuesto "FinFlow". Reemplaza a la version Spring Boot, conservando
+        la misma logica de dominio y el mismo diseno visual.
+    </description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.release>21</maven.compiler.release>
+        <jakartaee-api.version>10.0.0</jakartaee-api.version>
+        <mail-api.version>2.1.3</mail-api.version>
+        <persistence-api.version>3.1.0</persistence-api.version>
+        <compiler-plugin.version>3.15.0</compiler-plugin.version>
+        <war-plugin.version>3.5.1</war-plugin.version>
+        <liberty-plugin.version>3.12.0</liberty-plugin.version>
+        <postgresql.version>42.7.9</postgresql.version>
+        <hibernate.version>6.5.2.Final</hibernate.version>
+    </properties>
+
+    <dependencies>
+        <!-- API de Jakarta EE perfil "Web" (JSF/Faces, CDI, Bean Validation, etc.)
+             la provee el propio servidor Liberty en tiempo de ejecucion.
+             OJO: el perfil Web NO incluye Jakarta Mail (eso solo viene en el
+             perfil completo de la plataforma), por eso se agrega aparte abajo. -->
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-web-api</artifactId>
+            <version>${jakartaee-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- API de Jakarta Mail (solo el "contrato"; la implementación la
+             aporta en tiempo de ejecución la feature mail-2.1 de Liberty,
+             declarada en server.xml). Sin esto, EmailService.java no compila
+             porque jakarta.mail.* no está en el perfil Web. -->
+        <dependency>
+            <groupId>jakarta.mail</groupId>
+            <artifactId>jakarta.mail-api</artifactId>
+            <version>${mail-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- API de Jakarta Persistence (JPA), empaquetada en el WAR a
+             propósito: como no se usa la feature "persistence-3.1" de
+             Liberty (ver nota en server.xml), estas clases deben venir
+             dentro de la aplicación en vez de esperarlas del servidor. -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>${persistence-api.version}</version>
+        </dependency>
+
+        <!-- Driver de PostgreSQL: va empaquetado en el WAR -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+        </dependency>
+
+        <!-- Hibernate como proveedor JPA, empaquetado en el WAR para no
+             depender de que Liberty traiga uno por defecto. -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>SimuladorPresupuestoJSF</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${compiler-plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>${war-plugin.version}</version>
+            </plugin>
+
+            <!--
+                Ejecutar 'mvn liberty:run' compila, empaqueta y arranca el servidor.
+                'mvn liberty:dev' arranca en modo desarrollo con recarga en caliente.
+            -->
+            <plugin>
+                <groupId>io.openliberty.tools</groupId>
+                <artifactId>liberty-maven-plugin</artifactId>
+                <version>${liberty-plugin.version}</version>
+                <configuration>
+                    <!-- Sin esto, el plugin no instala automáticamente el
+                         WAR de este proyecto en el servidor: arranca
+                         Liberty pero sin ninguna aplicación desplegada
+                         (por eso se ve la página de bienvenida en vez de
+                         la app). -->
+                    <installAppPackages>project</installAppPackages>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
 
